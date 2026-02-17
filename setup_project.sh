@@ -129,8 +129,8 @@ read -p "Update the attendance thresholds now? (y/n): " UPDATE_CONF
 if [[ "$UPDATE_CONF" == "y" || "$UPDATE_CONF" == "Y" ]]; then
 
 # get new values from the user
-read -p "Please enter WARNING threshold (e.g., 85)" NEW_WARN
-read -p "Please enter FAILURE threshold (e.g., 50" NEW_FAIL
+read -p "Please enter WARNING threshold (e.g., 85):" NEW_WARN
+read -p "Please enter FAILURE threshold (e.g., 50):" NEW_FAIL
 
 echo "Applying changes to the configuration file....."
 
@@ -146,4 +146,23 @@ echo "Using default configuration settings"
 
 fi
 
+# Health Checker
+echo " System Health Check "
+# check if python 3 is installed
+if command -v python3 &> /dev/null; then
+echo -n " Python 3 found: "
+python3 --version
+else
+echo "WARNING!! Python 3 is NOT installed"
+echo " Must have python to run this application "
+fi
 
+# confirm the directory structure exists
+if [ -f "$DIR_NAME/attendance_checker.py" ] && [ -f "$DIR_NAME/Helpers/config.json" ]; then
+echo "Great! Tracker '$DIR_NAME' is ready"
+echo " Location: $(pwd)/$DIR_NAME "
+else
+echo "ERROR! setup NOT completed"
+exit 1
+
+fi
