@@ -54,15 +54,15 @@ After a successful run, the following structure is created:
 
 ```text
 attendance_tracker_{input}/
-├── attendance_checker.py   # Main Application Logic
+├── attendance_checker.py   
 ├── Helpers/
-│   ├── assets.csv          # Student Data
-│   └── config.json         # Configuration Settings
+│   ├── assets.csv          
+│   └── config.json       
 └── reports/
-    └── reports.log         # Activity Logs
+    └── reports.log         
 ```
 
-Video link: https://www.loom.com/share/f0386f258d61427eb6271860d70b97cd
+Run through video link: https://www.loom.com/share/f0386f258d61427eb6271860d70b97cd
 
 ---
 
