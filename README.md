@@ -62,5 +62,7 @@ attendance_tracker_{input}/
     └── reports.log         # Activity Logs
 ```
 
+Video link: https://www.loom.com/share/f0386f258d61427eb6271860d70b97cd
+
 ---
 
